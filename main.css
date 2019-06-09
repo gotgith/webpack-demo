@@ -398,7 +398,7 @@ section.portfolio .swiper-button-next {
     right: 100%;
     left: auto;
     border-radius: 50%;
-    transform: translateY(32px);
+    transform: translateY(16px);
 }
 
 section.portfolio .swiper-button-next {
