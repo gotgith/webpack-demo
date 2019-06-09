@@ -1,42 +1,52 @@
-body{
+body {
     background: #EFEFEF; 
     margin: 0;
 }
-a{
+
+a {
     color: inherit;
     text-decoration: none;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
-hr{
+
+hr {
     height: 0;
     border: none;
     border: 1px solid #DEDEDE;
 }
-ul,ol{
+
+ul,ol {
     list-style: none;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
 }
-.clearfix::after{
+
+.clearfix::after {
     content: '';
     display:block;
     clear: both;
 }
+
 [data-x].active {
     outline: 10px solid red;
 }
-[data-x].offset{
+
+[data-x].offset {
     transform: translateY(100px);
 }
-[data-x]{
+
+[data-x] {
     transform: translateY(0);
     transition: all 0.5s;
 }
-@keyframes slideUp{
+
+@keyframes slideUp {
     0%{
         transform: translateY(-30%)
     }
@@ -44,7 +54,8 @@ h1,h2,h3,h4,h5,h6{
         transform: translateY(0)
     }
 }
-.topNavBar{
+
+.topNavBar {
     padding: 20px 0;
     position: fixed;
     top: 0;
@@ -53,6 +64,7 @@ h1,h2,h3,h4,h5,h6{
     transition: all 0.5s;
     color: #b7b7b7;
 }
+
 .topNavBar.sticky {
     background: white;
     padding: 8px 0;
@@ -60,24 +72,29 @@ h1,h2,h3,h4,h5,h6{
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
     color: #3d4451;
 }
-.topNavBar nav{
+
+.topNavBar nav {
     padding-top: 5px;
 }
-.topNavBar-inner{
+
+.topNavBar-inner {
     padding: 0 16px; 
 }
-.topNavBar nav>ul{
+
+.topNavBar nav>ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.topNavBar nav>ul>li{
+
+.topNavBar nav>ul>li {
     float: left;
     margin-left: 17px;
     margin-right:17px;
     position: relative;
 }
-.topNavBar nav>ul>li>a{
+
+.topNavBar nav>ul>li>a {
     font-size:12px; 
     color: inherit;
     font-weight: bold;
@@ -88,8 +105,9 @@ h1,h2,h3,h4,h5,h6{
     display: block;
     position: relative;
 }
+
 .topNavBar nav > ul > li.active > a::after,
-.topNavBar nav > ul > li.highLight > a::after{
+.topNavBar nav > ul > li.highLight > a::after {
     content: '';
     display: block;
     position: absolute;
@@ -100,6 +118,7 @@ h1,h2,h3,h4,h5,h6{
     background: #e06567;
     animation: menuSlide 0.3s;
 }
+
 @keyframes menuSlide {
     0%{
         width: 0;
@@ -108,6 +127,7 @@ h1,h2,h3,h4,h5,h6{
         width: 100%
     }
 }
+
 .topNavBar .submenu {
     display: none;
     position: absolute;
@@ -117,10 +137,12 @@ h1,h2,h3,h4,h5,h6{
     color: #3d4451;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
 .topNavBar  li.active > .submenu {
     display: block;
     animation: submenuSlide 0.3s; 
 }
+
 @keyframes submenuSlide {
     0% {
         margin-right: 100%;
@@ -129,41 +151,49 @@ h1,h2,h3,h4,h5,h6{
         margin-right: 0%;
     }
 }
+
 .topNavBar .submenu > li {
     white-space: nowrap;
     padding: 5px 10px;
 }
-.topNavBar .logo{
+
+.topNavBar .logo {
     font-size: 24px; 
     font-family: "Arial Black";
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.topNavBar .logo .rs{
+
+.topNavBar .logo .rs {
     margin-right: 4px;
     color: #E6686A;
 }
-.topNavBar .logo .card{
+
+.topNavBar .logo .card {
     color: #9A9DA2; 
 }
-.banner{
+
+.banner {
     height: 515px; 
     background-image: url(./img/rs-cover-2-2-1-1.jpg); 
     background-position: center center;
     background-size: cover; 
 }
-.banner .mask{
+
+.banner .mask {
     height: 515px;
     background-color: rgba(0,0,0,0.8)
 }
-.userCard{
+
+.userCard {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5); 
 }
-.userCard .welcome{
+
+.userCard .welcome {
     background: #E6686A;
     color: white;
     display: inline-block;
@@ -172,7 +202,8 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
     margin-bottom: 10px;
 }
-.userCard .welcome .triangle{
+
+.userCard .welcome .triangle {
     display: block;
     border: 10px solid transparent;
     width: 0;
@@ -182,41 +213,51 @@ h1,h2,h3,h4,h5,h6{
     left: 4px;
     top: 100%;
 }
-.userCard .picture{
+
+.userCard .picture {
     float: left;
 }
-.userCard .text{
+
+.userCard .text {
     float: left;
     margin-left: 50px;
     width: 470px;
 }
-.userCard .text h1{
+
+.userCard .text h1 {
     margin-top: 18px;
 }
-.userCard .text hr{
+
+.userCard .text hr {
     margin: 20px 0;
 }
-.userCard .pictureAndText{
+
+.userCard .pictureAndText {
     padding: 50px;
 }
+
 .userCard dl dt,
-.userCard dl dd{
+.userCard dl dd {
     float: left;
     padding: 5px 0;
 }
-.userCard dl dt{
+
+.userCard dl dt {
     width: 30%;
     font-weight: bold; 
 }
-.userCard dl dd{
+
+.userCard dl dd {
     width: 70%;
     color: #9da0a7;
 }
-.userCard > footer.media{
+
+.userCard > footer.media {
     background: #E6686A;
     text-align: center;
 }
-.userCard > footer.media > a{
+
+.userCard > footer.media > a {
     display: inline-block;
     border-radius: 50%;
     width: 40px;
@@ -224,22 +265,27 @@ h1,h2,h3,h4,h5,h6{
     padding: 5px 0;
     margin: 16px;
 }
-.userCard > footer.media > a:hover{
+
+.userCard > footer.media > a:hover {
     background: #CF5D5F;
 }
-.userCard svg{
+
+.userCard svg {
     width: 30px;
     height: 30px;
     fill: white; 
     vertical-align: top;
 }
-body > main{
+
+body > main {
     margin-top: -340px;
 }
-body > main .downloadResume-wrapper{
+
+body > main .downloadResume-wrapper {
     text-align: center;
 }
-body > main .downloadResume{
+
+body > main .downloadResume {
     font-size: 14px;
     line-height: 16px;
     padding: 21px 55px;
@@ -251,10 +297,12 @@ body > main .downloadResume{
     font-weight: bold;
     margin: 20px 0;
 }
+
 body > main .downloadResume:hover{
     box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
     transition: box-shadow 0.2s;
 }
+
 .selfIntroduction{
     max-width: 940px;
     margin-left: auto;
@@ -273,6 +321,7 @@ section.portfolio{
     margin-right: auto;
     margin-top: 60px;
 }
+
 section.skills > h2,
 section.portfolio > h2{
     text-align: center;
@@ -281,25 +330,30 @@ section.portfolio > h2{
     line-height: 1.2;
     font-weight: 600;
 }
+
 section.skills h3{
     font-style: 14px;
     line-height: 1.1;
     padding-right: 40px;
 }
+
 section.skills > ol{
     background: white;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
     padding: 42px 50px 10px;
     margin-top: 30px;
 }
+
 section.skills > ol > li{
     float: left;
     width: 48%;
     box-sizing: border-box;
 }
+
 section.skills > ol > li:nth-child(even){
     float: right;
 }
+
 section.skills .progressBar{
     height: 5px;
     background: #fae1e1;
@@ -307,6 +361,7 @@ section.skills .progressBar{
     margin: 4px 0 40px;
     overflow: hidden;
 }
+
 section.skills .progressBar > .progress{
     height: 100%;
     background: #E6686A;
@@ -315,63 +370,39 @@ section.skills .progressBar > .progress{
     transform: translateX(0);
     transition: all 1s; 
 }
+
 section.skills.offset .progress{
     transform: translateX(-100%);
 }
-section.portfolio{
+
+section.portfolio {
     text-align: center;
     margin-bottom: 100px;
+    max-width: 720px; 
 }
-section.portfolio > nav{
-    text-align: center;
+
+section.portfolio h2 {
+    margin-bottom: 32px;
 }
-section.portfolio > nav > ol{
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: top;
+
+section.portfolio .swiper-container {
+    width: 600px;
+    height: 450px;
 }
-section.portfolio ol > li{
-    float: left;
-    margin-left: 40px;
-    cursor: pointer;
+
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next {
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    right: 100%;
+    left: auto;
+    border-radius: 50%;
+    transform: translateY(32px);
 }
-section.portfolio > nav > ol > li:first-child{
-    margin-left: 0px;
+
+section.portfolio .swiper-button-next {
+    left: 100%;
+    right: auto;
 }
-section.portfolio > nav{
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 32px;
-}
-section.portfolio > nav .bar{
-    height: 5px;
-    background: white;
-    margin-top: 5px;
-    margin-bottom: 28px;
-    border-radius: 2px;
-}
-section.portfolio > nav .bar-Inner{
-    height: 100%;
-    background: #E6686A;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-section.portfolio > nav .bar.state-1 .bar-Inner{
-    margin-left: 0;
-    width: 30px;
-}
-section.portfolio > nav .bar.state-2 .bar-Inner{
-    margin-left: 75px;
-    width: 30px;
-}
-section.portfolio > nav .bar.state-3 .bar-Inner{
-    margin-left: 145px;
-    width: 100px;
-}
-section.portfolio .works{
-    position: relative;
-}
-section.portfolio .works > .big,
-section.portfolio .works > .small {
-    position: absolute;
-}
+
