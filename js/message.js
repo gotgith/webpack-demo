@@ -50,7 +50,7 @@
         },
         bindEvents: function () {
             // submit事件包括提交按钮被点击和包含在任意一个input打回车
-            this.form.addEventListener('submit', function (e) {
+            this.form.addEventListener('submit', (e) => {
                 // 提交默认会刷新页面，因此要阻止默认事件
                 e.preventDefault()
                 this.saveMessage()
@@ -61,15 +61,17 @@
             // 得到用户输入的content
             let name = myForm.querySelector('input[name=name]').value
             let content = myForm.querySelector('input[name=content]').value
-            this.model.sava(name, content).then(function (object) {
-                // window.location.reload() // 存入成功后自动刷新页面,用户体验差！
-                // 不刷新，直接添加li
-                let li = document.createElement('li')
-                li.innerText = `${object.attributes.name}: ${object.attributes.content}`
-                let messageList = document.querySelector('#messageList')
-                messageList.appendChild(li)
-                myForm.querySelector('input[name=content]').value = ''
-            })
+            if (content !== "" && name !== ""){
+                this.model.sava(name, content).then(function (object) {
+                    // window.location.reload() // 存入成功后自动刷新页面,用户体验差！
+                    // 不刷新，直接添加li
+                    let li = document.createElement('li')
+                    li.innerText = `${object.attributes.name}: ${object.attributes.content}`
+                    let messageList = document.querySelector('#messageList')
+                    messageList.appendChild(li)
+                    myForm.querySelector('input[name=content]').value = ''
+                })
+            }
         }
     }
     controller.init(view, model)
