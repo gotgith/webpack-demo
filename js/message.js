@@ -31,7 +31,7 @@
         init: function (view, model) {
             this.view = view
             this.model = model
-            
+
             this.messageList = view.querySelector('#messageList')
             this.form = view.querySelector('form')
             this.model.init()
@@ -50,7 +50,7 @@
         },
         bindEvents: function () {
             // submit事件包括提交按钮被点击和包含在任意一个input打回车
-            this.form.addEventListener('submit', (e) => {
+            this.form.addEventListener('submit', function (e) {
                 // 提交默认会刷新页面，因此要阻止默认事件
                 e.preventDefault()
                 this.saveMessage()
