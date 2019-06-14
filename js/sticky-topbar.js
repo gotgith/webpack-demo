@@ -1,5 +1,5 @@
 !function () {
-    var view = document.querySelector('#topNavBar')
+    var view = View('#topNavBar')
     var controller = {
         view: null,
         init: function (view) {
@@ -8,13 +8,20 @@
         },
         bindEvents: function () {
             var view = this.view
-            window.addEventListener('scroll', function (x) {
+            window.addEventListener('scroll', (x) => {
                 if (window.scrollY > 0) {
-                    view.classList.add('sticky')
+                    this.active()
                 } else {
-                    view.classList.remove('sticky')
+                    this.deactive()
                 }
             })
+            // 箭头函数没有 this
+        },
+        active: function(){
+            this. view.classList.add('sticky')
+        },
+        deactive: function(){
+            this. view.classList.remove('sticky')
         }
     }
     controller.init(view)
